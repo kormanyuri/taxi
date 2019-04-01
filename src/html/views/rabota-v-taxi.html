@@ -1,0 +1,193 @@
+<% var data = {
+title: "О компании",
+tel: "+7 (911) <span>928-51-61</span>",
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<%= _.template(require('./../includes/banner.html').default)(data) %>
+
+<div class="container">
+    <h1>&nbsp;</h1>
+    <h1 style="margin-top:-60px" class="text-center text-transform-none">Работа в Такси, на своем авто или на машине компании:</h1>
+    <div class="brue-frame mw-610 block-center text-center marg-b-50">
+        <div class="text-large text-bold">Получайте от 50 000 рублей в месяц!<br>
+            Заключение договора, гибкий график.
+        </div>
+        <div class="marg-10"><a class="h2 text-transform-uppercase color-blue" data-modallabel="Оставить заявку" data-toggle="modal" href="http://aero-in.ru/rabota-v-taxi/#claim">Оставьте заявку</a></div>
+        <div class="color-gray">Оператор перезвонит вам и уточнит детали</div>
+    </div>
+    <h2 class="h2 text-center text-transform-none">Условия сотрудничества: Работа в такси или Аренда машины</h2>
+    <div class="flex flex--i-30 flex--col-3 flex--wrap marg-b-50">
+        <div class="flex__item">
+            <div class="pane">
+                <div class="pane__title text-bold"><i class="icon icon--car">&nbsp;</i> Работа в такси</div>
+                <div class="pane__body">
+                    <div class="list-table text-center">
+                        <div class="list-table__item">
+                            <div class="text-large text-bold">до 70% от суммы заказа</div>
+                            <div>получает водитель</div>
+                        </div>
+                        <div class="list-table__item">
+                            <div class="text-large text-bold">Гибкий график</div>
+                            <div>с выходными</div>
+                        </div>
+                        <div class="list-table__item">
+                            <div>Заработок водителя</div>
+                            <div class="text-large text-bold">50’000 +</div>
+                        </div>
+                        <div class="list-table__item">
+                            <div class="text-large text-bold">Автомобиль готов</div>
+                            <div>для работы в такси</div>
+                        </div>
+                    </div>
+                    <div class="marg-t-10"><a class="blue-button" data-modallabel="Работа в такси Оставить заявку" data-toggle="modal" href="http://aero-in.ru/rabota-v-taxi/#claim">Оставить заявку</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="flex__item">
+            <div class="pane pane--light">
+                <div class="pane__title">Удобно при любом выборе!</div>
+                <div class="pane__body">
+                    <div class="flex flex--i-20 marg-b-20">
+                        <div class="flex__item"><i class="icon icon--hand-key">&nbsp;</i></div>
+                        <div class="flex__item">
+                            <div class="text-large text-bold">Автомобиль находится у вас</div>
+                            <div>осмотр раз в неделю</div>
+                        </div>
+                    </div>
+                    <div class="flex flex--i-20 marg-b-20">
+                        <div class="flex__item"><i class="icon icon--map">&nbsp;</i></div>
+                        <div class="flex__item">
+                            <div>Работаем в Петербурге с разными</div>
+                            <div class="text-large text-bold">диспетчерскими службами</div>
+                        </div>
+                    </div>
+                    <div class="flex flex--i-20">
+                        <div class="flex__item"><i class="icon icon--maintenance">&nbsp;</i></div>
+                        <div class="flex__item">
+                            <div>Содержание автомобиля</div>
+                            <div class="text-large text-bold">за счет компании</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex__item">
+            <div class="pane">
+                <div class="pane__title text-bold"><i class="icon icon--key">&nbsp;</i> Аренда автомобиля</div>
+                <div class="pane__body">
+                    <div class="list-table text-center">
+                        <div class="list-table__item">
+                            <div>Автомобиль в аренду</div>
+                            <div class="text-large text-bold">от 1’200 рублей в сутки</div>
+                        </div>
+                        <div class="list-table__item">
+                            <div>Аренда предоставляется</div>
+                            <div class="text-large text-bold">без залога и вложений</div>
+                        </div>
+                        <div class="list-table__item">
+                            <div>Предоставляем выходные</div>
+                        </div>
+                    </div>
+                    <div class="marg-t-10"><a class="blue-button" data-modallabel="Аренда автомобиля Оставить заявку" data-toggle="modal" href="http://aero-in.ru/rabota-v-taxi/#claim">Оставить заявку</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="h2 text-center text-transform-none marg-b-10">Кого мы ищем для работы в такси?</h2>
+    <div class="text-large color-gray text-center">Отправьте эти документы любым способом</div>
+    <div class="flex flex--i-30 flex--col-4 text-center marg-30  flex--wrap">
+        <div class="flex__item">
+            <div class="who">
+                <div class="who__icon"><i class="icon icon--car-time">&nbsp;</i></div>
+                <div class="text-medium">Стаж вождения от 3-х лет</div>
+            </div>
+        </div>
+        <div class="flex__item">
+            <div class="who">
+                <div class="who__icon"><i class="icon icon--age">&nbsp;</i></div>
+                <div class="text-medium">Возраст от 21 лет</div>
+            </div>
+        </div>
+        <div class="flex__item">
+            <div class="who">
+                <div class="who__icon"><i class="icon icon--experience">&nbsp;</i></div>
+                <div class="text-medium">Опыт работы водителем такси не обязателен!</div>
+            </div>
+        </div>
+    </div>
+    <div class="color-gray text-center text-normal marg-b-60">
+        <p>Ждать рассмотрения анкеты не придется – проверяем соискателей за 1 день.</p>
+        <p>Можем отказать в случае тяжких судимостей, лишения прав, большого количества штрафов за нарушение ПДД.</p>
+    </div>
+    <h2 class="h2 text-center text-transform-none">О работе в такси в нашей компании</h2>
+    <div class="flex flex--i-30 flex--col-2 flex--wrap marg-b-50">
+        <div class="flex__item">
+            <div class="color-gray text-normal marg-t-20">
+                <p>Мы открыли свой таксопарк в 2014&nbsp;году. Сотрудничаем с лучшими диспетчерскими службами Санкт-Петербурга: «Яндекс.Такси» и Gett.</p>
+                <p><i class="icon icon--attention icon--indent-r">&nbsp;</i>Приглашаем <a href="http://aero-in.ru/rabota-v-taxi/#">водителей с собственными автомобилями</a>.</p>
+            </div>
+            <div class="info-el info-el--background-man flex flex--align-c">
+                <div class="flex flex--i-20">
+                    <div class="flex__item">
+                        <div class="info-el__number">183</div>
+                    </div>
+                    <div class="flex__item">
+                        <div class="info-el__body">Водителей<br>
+                            уже работают у нас
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex__item">
+            <div class="color-gray text-normal marg-t-20">
+                <p>Заработали репутацию надежной фирмы: рассчитываемся без задержек и заключаем официальный договор.</p>
+                <p><i class="icon icon--attention icon--indent-r">&nbsp;</i>Набираем сотрудников на транспорт компании.</p>
+            </div>
+            <div class="info-el info-el--background-car flex flex--align-c">
+                <div class="flex flex--i-20">
+                    <div class="flex__item">
+                        <div class="info-el__number">70</div>
+                    </div>
+                    <div class="flex__item">
+                        <div class="info-el__body">Автомобилей<br>
+                            в нашем автопарке
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="h2 text-center text-transform-none">Работа в такси у нас – это</h2>
+    <div class="flex flex--col-3 flex--wrap flex-i-30 marg-t-20 marg-b-50">
+        <div class="flex__item">
+            <div class="flex flex--i-20">
+                <div class="flex__item"><i class="icon icon--legal">&nbsp;</i></div>
+                <div class="flex__item">
+                    <div class="text-medium color-blue marg-b-10">Законно</div>
+                    <div class="text-standard color-gray">Ваши права под защитой. Обязательно заключаем официальный договор при приеме к нам в фирму.</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex__item">
+            <div class="flex flex--i-20">
+                <div class="flex__item"><i class="icon icon--car-locker">&nbsp;</i></div>
+                <div class="flex__item">
+                    <div class="text-medium color-blue marg-b-10">Безопасно</div>
+                    <div class="text-standard color-gray">Никаких поломок в пути. Машины в отличном техническом состоянии. Проверка – раз в неделю на своей СТО.</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex__item">
+            <div class="flex flex--i-20">
+                <div class="flex__item"><i class="icon icon--gesheft">&nbsp;</i></div>
+                <div class="flex__item">
+                    <div class="text-medium color-blue marg-b-10">Прибыльно</div>
+                    <div class="text-standard color-gray">Заказы будут 24 часа в сутки. Мы сотрудничаем с ведущими службами: «Яндекс.Такси» и Gett.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

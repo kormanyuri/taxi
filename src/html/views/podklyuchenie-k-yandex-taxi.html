@@ -1,0 +1,168 @@
+<% var data = {
+title: "Работа водителем через Яндекс Такси, подключение в Санкт-Петербурге",
+tel: "+7 (911) <span>928-51-61</span>",
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<%= _.template(require('./../includes/banner.html').default)(data) %>
+
+<div class="container">
+    <h1>Подключение к Яндекс.Такси </h1>
+    <p>Работа в "Яндекс.Такси" - отличная возможность подзаработать или сделать таксомоторную деятельность основным источником дохода. Сервис поиска автомобилей от ведущей поисковой системы России оценили водителей и сотни тысяч пассажиров.</p>
+    <p>В Yandex работа водителям предоставляется вне зависимости от рейтинга. Главное для сервиса - насколько близко вы находитесь к клиенту. Дополнительными преимуществами будут честность и вежливость по отношению к пассажирам.</p>
+    <div class="ico-block-5">
+        <div class="ico-1">Свободный график<span>Вы сами решаете когда и сколько работать!</span></div>
+        <div class="ico-2">Никаких планов<span>Мы не ставим дневных / суточных / недельных / месячных планов!</span></div>
+        <div class="ico-3">Поддержка 24/7<span>Круглосуточная диспетчерская и техническая поддержка!</span></div>
+        <div class="ico-4">Лицензия такси<span>Поможем быстро и надежно оформить лицензию!</span></div>
+        <div class="ico-5">Быстро подключим<span>Подключим Вас за 30 минут <span class="green">без визита в офис</span>.</span></div>
+    </div>
+    <h4>Официальный проверенный партнёр Яндекс.Такси</h4>
+    <p>Подключение к Yandex Taxi напрямую, минуя партнера, невозможно. АЭРО-ИН - официальный партнер системы, с помощью которого вы сможете зарабатывать деньги. Мы обслуживаем водителей круглосуточно и помогаем с поиском заявок.</p>
+    <h4 class="text-center">Скачайте приложение «Яндекс.Таксометр»:</h4>
+    <div class="text-center"><a href="https://play.google.com/store/apps/details?id=ru.yandex.taximeter&amp;hl=ru&amp;utm_source=thecab.ru&amp;utm_campaign=yandex_promo&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" title="Загрузи приложение Яндекс.Таксометр"><img alt="" src="../img/googleplay.png" title=""></a></div>
+    <div class="requirements">
+        <div class="req">
+            <div class="title">Требования к водителю</div>
+            <ul class="list-yes-no">
+                <li>Стаж вождения от&nbsp;3&nbsp;лет</li>
+                <li>Возраст от&nbsp;23&nbsp;лет</li>
+                <li>Права категории В</li>
+                <li>Любое гражданство</li>
+            </ul>
+        </div>
+        <div class="req">
+            <div class="title">Требования к автомобилю</div>
+            <ul class="list-yes-no">
+                <li>Иномарка эконом класса от 2011 года</li>
+                <li>Иномарка комфорт класса от 2010 года</li>
+                <li>Иномарка класса бизнес и&nbsp;VIP от 2011 года в&nbsp;хорошем состоянии</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="pay pay-1">
+                <div class="title">Оплата наличными</div>
+                <p>Наличные полученные от клиента остаются у водителя</p>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="pay pay-2">
+                <div class="title">Оплата безналом</div>
+                <p>Одна комиссия - только сервису Яндекс Такси</p>
+                <p>Деньги отправляются на вашу карту каждый будний день</p>
+                <p>Вывод безнала комиссия 3%</p>
+            </div>
+        </div>
+    </div>
+    <h4 id="tariff">Тарификация поездок Яндекс.Такси для водителей</h4>
+    <table class="table-tarif table-tarif2">
+        <!--thead>
+           <tr>
+               <th></th>
+               <th class="type">
+               <div class="name">Тариф &laquo;Стандарт&raquo;</div></th>
+               <th class="type">
+               <div class="name">Тариф &laquo;Профессионал&raquo;</div></th>
+           </tr>
+           </thead>
+           <tbody>
+           <tr>
+               <td>Оплата наличными</td>
+               <td>Наличные полученные от клиента остаются у водителя</td>
+               <td>Наличные полученные от клиента остаются у водителя</td>
+           </tr>
+           <tr>
+               <td>Оплата безналом</td>
+               <td>Комиссия сервиса Яндекс.Такси до 0 - 16%<br />
+               Наша комиссия с заказов 0 - 5%<br />
+               Расчёт и выплаты на карту пять дней в неделю (пн,вт,ср,чт,пт)<br />
+               Комиссия за вывод средств 0%</td>
+               <td>Комиссия сервиса Яндекс.Такси до 0 &ndash; 16%<br />
+               Наша комиссия с заказов 0 %<br />
+               Покупка смены 50 руб. в день (если водитель не вышел на линию, сумма не списывается)<br />
+               Расчёт и выплаты на карту пять дней в неделю (пн,вт,ср,чт,пт)<br />
+               Комиссия за вывод средств 3%</td>
+           </tr>
+           </tbody-->
+    </table>
+    <table class="table-tarif">
+        <thead>
+        <tr>
+            <th></th>
+            <th class="type">
+                <div class="img"><img scale="0" src="../img/ec_class.jpg"></div>
+                <div class="name">Эконом класс</div>
+                <span>от&nbsp;Ford Focus, Hyundai Solaris, Kia Rio, Renault Fluence</span>
+            </th>
+            <th class="type">
+                <div class="img"><img scale="0" src="../img/prius.jpg"></div>
+                <div class="name">Комфорт класс</div>
+                <span>от&nbsp;Skoda Octavia, Ford Galaxy, Ford Mondeo, Hyundai i40</span>
+            </th>
+            <th class="type">
+                <div class="img"><img scale="0" src="../img/e_class.jpg"></div>
+                <div class="name">Бизнес класс</div>
+                <span>от&nbsp;Mercedes-Benz E-class, BMW 5, Audi A6, Hyundai Equus</span>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Тариф</td>
+            <td>49&nbsp;р. + 12&nbsp;р./км + 5&nbsp;р./мин</td>
+            <td>149&nbsp;р. + 20&nbsp;р./км + 5&nbsp;р./мин</td>
+            <td>399&nbsp;р. + 30&nbsp;р./км + 7&nbsp;р./мин</td>
+        </tr>
+        <tr>
+            <td>Минимальная стоимость для водителя</td>
+            <td>140&nbsp;р.</td>
+            <td>220&nbsp;р.</td>
+            <td>400&nbsp;р.</td>
+        </tr>
+        </tbody>
+    </table>
+    <!--p>Список автомобилей, которые подходят для подключения к Яндекс.такси</p>
+       <p><a class="btn btn-invert" href="https://driver.yandex/list/" rel="nofollow" target="_blank">Перейти</a></p-->
+    <!-- здесь удаляется </div> -->
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <a data-toggle="modal" href="http://aero-in.ru/connect/yandex-taxi.html#claim3" class="btn-big">Задать вопрос</a>
+        </div>
+        <div class="col-sm-6">
+            <a data-toggle="modal" href="http://aero-in.ru/connect/yandex-taxi.html#claim" class="btn-big">Перезвонить мне</a>
+        </div>
+    </div>
+    <div class="ico-block-reasons">
+        <h2 class="text-center">5 причин работать с нами</h2>
+        <div class="ico-1">Честные условия работы</div>
+        <div class="ico-2">Прозрачное сотрудничество</div>
+        <div class="ico-3">Низкая комиссия</div>
+        <div class="ico-4">Надежная компания</div>
+        <div class="ico-5">Всегда на связи</div>
+    </div>
+</div>
+<div class="container">
+    <h2>Отзывы</h2>
+    <div class="reviews">
+        <div>
+            <p class="author"></p>
+            <p>Ян</p>
+            <p class="pro">Работа выгодная! Главное, чтобы у тебя была своя машина.</p>
+        </div>
+        <div>
+            <p class="author"></p>
+            <p>Михаил</p>
+            <p class="pro">Подключился за 30 минут и можно выезжать! Сервис крутой!</p>
+        </div>
+        <div>
+            <p class="author"></p>
+            <p>Игнат Б.</p>
+            <p class="pro">За два часа после работы зарабатывают больше, чем в офисе. Это все, что нужно знать о Яндекс такси.</p>
+        </div>
+    </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

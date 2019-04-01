@@ -1,0 +1,79 @@
+<% var data = {
+title: "Условия",
+tel: "+7 (8182) <span>45-75-60</span>",
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<%= _.template(require('./../includes/banner.html').default)(data) %>
+
+<div class="container">
+    <h2>Подключение в Архангельске</h2>
+    <div class="row partners">
+        <div class="col-sm-4">
+            <div class="logo-partner">
+                <img src="img/ya-taxi.png" alt="Яндекс.Такси">
+            </div>
+            <a href="podklyuchenie-k-yandex-taxi.html">
+                <div class="info-partner img-3">
+                    <div class="title">Подключение<br> к Яндекс.Такси</div>
+                    <div class="coop">
+                        <ol>
+                            <li>Оставляете заявку на сайте</li>
+                            <li>Отправляете документы</li>
+                            <li>Начинаете зарабатывать</li>
+                        </ol>
+                        <div class="commission">
+                            Комиссия c заказов
+                            <span>Я.Такси - 2%</span>
+                        </div>
+                    </div>
+                    <span class="btn-blue">Подключиться<br> к Яндекс.Такси</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="ico-block-5">
+        <div class="ico-1">Свободный график<span>Вы сами решаете когда и сколько работать!</span></div>
+        <div class="ico-2">Никаких планов<span>Мы не ставим дневных / суточных / недельных / месячных планов!</span></div>
+        <div class="ico-3">Низкая комиссия<span>Самая низкая комиссия от Генерального Партнера!</span></div>
+        <div class="ico-5">Быстро подключим<span>Подключим Вас за 14 минут без визита в офис.</span></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <a data-toggle="modal" href="http://aero-in.ru/#claim3" class="btn-big">Задать вопрос</a>
+        </div>
+        <div class="col-sm-6">
+            <a data-toggle="modal" href="http://aero-in.ru/#claim" class="btn-big">Перезвонить мне</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2 class="text-center">Наши преимущества</h2>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="plus">
+                <img src="img/content_1.jpg" alt="">
+                <span>Официальные Партнеры крупнейших агрегаторов такси России</span>
+            </div>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="plus">
+                <img src="img/content_2.jpg" alt="">
+                <span>Самая низкая комиссия без скрытых условий</span>
+            </div>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="plus">
+                <img src="img/map.jpg" alt="">
+                <span>Присутствие в 18 городах России</span>
+            </div>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <div class="plus">
+                <img src="img/content_3.jpg" alt="">
+                <span>Собственное производство брендирования, лайтбоксов</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

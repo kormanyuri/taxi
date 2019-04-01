@@ -1,0 +1,87 @@
+<% var data = {
+title: "Условия",
+tel: "+7 (911) <span>928-51-61</span>",
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<%= _.template(require('./../includes/banner.html').default)(data) %>
+
+<div class="container">
+    <h1>Условия</h1>
+    <div class="ico-block-5">
+        <div class="ico-1">Свободный график<span>Вы сами решаете когда и сколько работать!</span></div>
+        <div class="ico-2">Никаких планов<span>Мы не ставим дневных / суточных / недельных / месячных планов!</span></div>
+        <div class="ico-3">Поддержка 24/7<span>Круглосуточная диспетчерская и техническая поддержка!</span></div>
+        <div class="ico-4">Лицензия такси<span>Поможем быстро и надежно оформить лицензию!</span></div>
+        <div class="ico-5">Быстро подключим<span>Подключим Вас за 30 минут <span class="green">без визита в офис</span>.</span></div>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div class="row partners">
+        <div class="col-sm-4">
+            <div class="logo-partner"><img alt="Gett" src="./img/gett.png"></div>
+            <div class="info-partner img-1">
+                <div class="title"><a href="http://aero-in.ru/connect/gett.html">Подключение<br>
+                    к Gett</a>
+                </div>
+                <ol>
+                    <li><a href="http://aero-in.ru/connect/gett.html">Оставляете заявку на сайте</a></li>
+                    <li><a href="http://aero-in.ru/connect/gett.html">Отправляете документы</a></li>
+                    <li><a href="http://aero-in.ru/connect/gett.html">Начинаете зарабатывать</a></li>
+                </ol>
+                <div class="commission"><a href="http://aero-in.ru/connect/gett.html">Комиссия c заказов <span>Gett - 3%</span> </a></div>
+                <a href="http://aero-in.ru/connect/gett.html"><span class="btn-blue">Подключиться<br>
+                  к Gett</span> </a>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="logo-partner">
+                <img src="./img/aero-logo.png" alt="Uber">
+            </div>
+            <a href="http://aero-in.ru/terms-of-cooperation/#">
+                <div class="info-partner img-2">
+                    <div class="title">Аренда<br> и работа в такси</div>
+                    <div class="coop">
+                        <div class="coop__item coop__item--car">
+                            <div class="coop__body">
+                                <div class="coop__title">Работа</div>
+                                <div class="coop__text">
+                                    <p>50% от суммы заказа получает водитель</p>
+                                    <p>Заработок водителя 60’000 +</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coop__item coop__item--keys">
+                            <div class="coop__body">
+                                <div class="coop__title">Аренда</div>
+                                <div class="coop__text">
+                                    <p>Автомобиль в аренду <br>от 1’150 рублей в сутки</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>&nbsp;<br><br></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <div class="logo-partner"><img alt="Яндекс.Такси" src="./img/ya-taxi.png"></div>
+            <div class="info-partner img-3">
+                <div class="title"><a href="http://aero-in.ru/connect/yandex-taxi.html">Подключение<br>
+                    к Яндекс.Такси</a>
+                </div>
+                <ol>
+                    <li><a href="http://aero-in.ru/connect/yandex-taxi.html">Оставляете заявку на сайте</a></li>
+                    <li><a href="http://aero-in.ru/connect/yandex-taxi.html">Отправляете документы</a></li>
+                    <li><a href="http://aero-in.ru/connect/yandex-taxi.html">Начинаете зарабатывать</a></li>
+                </ol>
+                <div class="commission"><a href="http://aero-in.ru/connect/yandex-taxi.html">Комиссия c заказов <span>Я.Такси - 0%</span> </a></div>
+                <a href="http://aero-in.ru/connect/yandex-taxi.html"><span class="btn-blue">Подключиться<br>
+                  к Яндекс.Такси</span> </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
