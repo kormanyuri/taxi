@@ -1,551 +1,613 @@
-
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Работа в гет такси, отзывы о подключении водителей в Санкт-Петербурге</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <link rel="shortcut icon" href="favicon/favicon.ico">
-  <link rel="stylesheet" href="css/style.bundle.css">
-  <script type="text/javascript">
-    var myMap = new ymaps.Map('myMap', {
-      // центр и коэффициент масштабирования однозначно
-      // определяют область картографирования
-      center: [55.76, 37.64],
-      zoom: 7
-    });
-  </script>
-</head>
-<body cz-shortcut-listen="true">
-<header>
-  <div class="container">
-    <a class="logo" href="/">
-      <img src="img/logo.png" alt="" width="250">
-      <!--ЧТОБЫ ВЫ ЗАРАБАТЫВАЛИ БОЛЬШЕ-->
-    </a>
-    <div class="contacts">
-      <div class="ico-mess">
-        <a target="_blank" class="ico-whatsapp-min" href="https://api.whatsapp.com/send?phone=79119285161"></a>
-        <a target="_blank" class="ico-telegram-min" href="https://telegram.me/79119285161"></a>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Работа в гет такси, отзывы о подключении водителей в Санкт-Петербурге</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="stylesheet" href="css/style.bundle.css" />
+    <script type="text/javascript">
+      var myMap = new ymaps.Map("myMap", {
+        // центр и коэффициент масштабирования однозначно
+        // определяют область картографирования
+        center: [55.76, 37.64],
+        zoom: 7
+      });
+    </script>
+  </head>
+  <body cz-shortcut-listen="true">
+    <header>
+      <div class="container">
+        <a class="logo" href="/">
+          <img src="img/logo.png" alt="" width="250" />
+          <!--ЧТОБЫ ВЫ ЗАРАБАТЫВАЛИ БОЛЬШЕ-->
+        </a>
+        <div class="contacts">
+          <div class="ico-mess">
+            <a target="_blank" class="ico-whatsapp-min" href="https://api.whatsapp.com/send?phone=79119285161"></a>
+            <a target="_blank" class="ico-telegram-min" href="https://telegram.me/79119285161"></a>
+          </div>
+          <a href="tel:+78126471917" class="phone">+7 (911) <span>928-51-61</span></a>
+          <span class="city">Санкт-Петербург</span>
+          <a data-toggle="modal" href="#" data-target="#cityCl" class="other">Другой город</a>
+        </div>
+        <div class="info">
+          <span>ГЕНЕРАЛЬНЫЙ ПАРТНЕР</span>
+          Gett, Яндекс.Такси, Taxify - Bolt
+        </div>
+        <div class="block-btn">
+          <a data-toggle="modal" href="#" data-target="#claim" class="btn">Обратный звонок</a>
+          <a data-toggle="modal" href="#" data-target="#claim" class="btn btn-green">Подключиться</a>
+        </div>
       </div>
-      <a href="tel:+78126471917" class="phone">+7 (911) <span>928-51-61</span></a>
-      <span class="city">Санкт-Петербург</span>
-      <a data-toggle="modal" href="#" data-target="#cityCl" class="other">Другой город</a>
-    </div>
-    <div class="info">
-      <span>ГЕНЕРАЛЬНЫЙ ПАРТНЕР</span>
-      Gett, Яндекс.Такси, Taxify - Bolt
-    </div>
-    <div class="block-btn">
-      <a data-toggle="modal" href="#" data-target="#claim" class="btn">Обратный звонок</a>
-      <a data-toggle="modal" href="#" data-target="#claim" class="btn btn-green">Подключиться</a>
-    </div>
-  </div>
-</header>
-<a href="#" class="menu-mobile">МЕНЮ</a>
-<!--<nav>-->
-  <!--<div class="container">-->
-    <!--<ul>-->
-      <!--<li class="active"><a href="/index.html">Главная</a></li>-->
-      <!--<li><a href="/about.html">О компании</a></li>-->
-      <!--<li><a href="/terms-of-cooperation.html">Условия</a></li>-->
-      <!--<li><a href="/contacts.html">Контакты</a></li>-->
-      <!--<li><a href="/advantages.html">Наши преимущества</a></li>-->
-      <!--<li><a href="/shop.html">Брендирование Яндекс.Такси</a></li>-->
-    <!--</ul>-->
-  <!--</div>-->
-<!--</nav>-->
-<div class="banner inner">
-  <img src="img/banner.png" alt="">
-  <div class="info">
-    <span>Самые лучшие условия<br> от Генерального партнера</span>
-    <div class="pdkl">
-      <div><i>Беспредельно  низкая комиссия без скрытых условий</i></div>
-      <a data-toggle="modal" href="#" data-target="#claim" class="btn btn-invert">Подключиться</a>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-	<h1>Подключение к Gett </h1>
-	<p>Работа в Gett - отличная возможность получить дополнительный доход для
-		автовладельцев. Гетт - приложение для заказа такси в 120 городах 4
-		стран.</p>
-	<p>Высокая стоимость минимального заказа, вежливые клиенты, уникальный
-		уровень сервиса для водителя.</p>
-	<div class="ico-block-5">
-		<div class="ico-1">Свободный график<span>Вы сами решаете когда и сколько работать!</span></div>
-		<div class="ico-2">Никаких планов<span>Мы не ставим дневных / суточных / недельных / месячных планов!</span></div>
-		<div class="ico-3">Поддержка 24/7<span>Круглосуточная диспетчерская и техническая поддержка!</span></div>
-		<div class="ico-4">Лицензия такси<span>Поможем быстро и надежно оформить лицензию!</span></div>
-		<div class="ico-5">Быстро подключим<span>Подключим Вас за 30 минут <span class="green">без визита в офис</span>.</span></div>
-	</div>
-	<div class="btn-block-2"><a class="scroll btn btn-md" href="http://aero-in.ru/connect/.document">Работать на своём авто</a> <a class="scroll btn btn-md" href="http://aero-in.ru/connect/.document">Работать на авто компании</a></div>
-	<h4>Как начать работать?</h4>
-	<p>Для подключения к Gett вам нужно пройти online-обучение <br>
-		Ссылка на обучение - <a href="https://driver.gett.ru/education/exam/up/podklyuchenie-k-gett.html">https://driver.gett.ru/education/exam/up/</a></p>
-	<!--<p>Подключение - дело техники: присоединяйтесь к системе через авторизованного партнера, загружайте приложение - и начинайте работу. Gett исключает прямое сотрудничество, вместо этого - позволяет получить юридическую защиту и хорошую техническую и консалтинговую поддержку. Начинайте работать с нами: вас ждут лучшие условия!</p>-->
-	<!--<div class="row btns">-->
-		<!--<div class="col-sm-6 text-right"><a href="https://play.google.com/store/apps/details?id=com.gettaxi.dbx.android" target="_blank" title="Загрузи приложение Gett Drivers в Google play"><img alt="" src="../img/googleplay.png" title=""></a></div>-->
-		<!--<div class="col-sm-6"><a href="itms-services://?action=download-manifest&amp;url=https://alpha.gett.com/driverbox/DriverBox-iOS/version_9.3/22/DriverBox.plist" target="_blank" title="Загрузи приложение Gett Driver в AppStore"><img alt="" src="../img/appstore.png" title=""></a></div>-->
-	<!--</div>-->
-	<!--<p>Для подключения к Gett вам нужно пройти обучение-тестирование.<br>-->
-		<!--Ссылка на обучение - <a href="https://driver.gett.ru/education/exam/up/" rel="nofollow" target="_blank">https://driver.gett.ru/education/exam/up/</a>-->
-	<!--</p>-->
-	<p>Далее для того чтобы подключиться к Gett необходимо подгрузить
-		фото/сканы документов в полях, представленных ниже.</p>
-	<!--<p>Чтобы подключить водителя к Gett водитель должен предварительно пройти онлайн тестирование и после того как он прошел тестирование, прислать нам дату обучения вместе с документами.</p>-->
-	<div class="requirements">
-		<div class="req">
-			<div class="title">Требования к водителю</div>
-			<ul class="list-yes-no">
-				<li>Возраст от&nbsp;21&nbsp;года</li>
-				<li>Права категории В</li>
-			</ul>
-		</div>
-		<div class="req">
-			<div class="title">Требования к автомобилю</div>
-			<ul class="list-yes-no">
-				<li>Минимальный год выпуска&nbsp;— 2011</li>
-				<li>Количество дверей не&nbsp;менее 4</li>
-				<li>Допускаются обклеенные машины</li>
-			</ul>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="pay pay-1">
-				<div class="title">Оплата наличными</div>
-				<p>Наличные полученные от клиента остаются у водителя</p>
-				<p>Комиссия GETT 17,7% (вычитается из безнала)</p>
-			</div>
-		</div>
-		<div class="col-sm-6">
-			<div class="pay pay-2">
-				<div class="title">Оплата безналом</div>
-				<p>Комиссия GETT 17,7%</p>
-				<p>Наша комиссия с безнала 3%</p>
-				<p>Расчёт и выплаты на карту еженедельно (вт-ср)</p>
-			</div>
-		</div>
-	</div>
-	<div class="document">
-		<div class="title">Для подключения потребуются документы</div>
-		<div class="ico-doc">
-			<div class="ico-1">Паспорт <span>Разворот с фотографией Прописка не нужна</span></div>
-			<div class="ico-2">Водительское удостоверение <span>С двух сторон</span></div>
-			<div class="ico-4">Свидетельство о регистрации транспортного средства <span>С двух сторон</span></div>
-			<div class="ico-5">Фотография автомобиля <span>С четырех сторон</span></div>
-			<div class="ico-7">Фотография водителя без верхней одежды <span>По пояс на светлом фоне</span></div>
-		</div>
-	</div>
-</div>
-<div class="container">
-	<form>
-		<div class="row">
-			<div class="col-sm-4">
-				<div class="form-group required">
-					<label for="last-name">Фамилия</label>
-					<input type="text" class="form-control" id="last-name" required>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="form-group required">
-					<label for="name">Имя</label>
-					<input type="text" class="form-control" id="name" required>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="form-group required">
-					<label for="middle-name">Отчество</label>
-					<input type="text" class="form-control" id="middle-name" required>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="form-group required">
-					<label for="city">Город</label>
-					<select class="custom-select form-control" id="city" required>
-						<option value=""></option>
-						<option value="Москва">Москва</option>
-						<option value="Санкт-Петербург">Санкт-Петербург</option>
-						<option value="Нижний Новгород">Нижний Новгород</option>
-						<option value="Уфа">Уфа</option>
-						<option value="Красноярск">Красноярск</option>
-						<option value="Челябинск">Челябинск</option>
-						<option value="Омск">Омск</option>
-						<option value="Пермь">Пермь</option>
-						<option value="Самара">Самара</option>
-						<option value="Новосибирск">Новосибирск</option>
-						<option value="Екатеринбург">Екатеринбург</option>
-						<option value="Сочи">Сочи</option>
-						<option value="Краснодар">Краснодар</option>
-						<option value="Ростов-на-Дону">Ростов-на-Дону</option>
-						<option value="Воронеж">Воронеж</option>
-						<option value="Казань">Казань</option>
-					</select>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="form-group required">
-					<label for="phone">Телефон</label>
-					<input type="text" class="form-control" id="phone" name="phone" data-inputmask="'mask': '+7(999) 999-99-99'">
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="form-group required">
-					<label for="email">E-mail</label>
-					<input type="email" class="form-control" id="email">
-				</div>
-			</div>
-		</div>
-		<div class="upload-document-group">
-			<div class="row">
-				<div class="col-sm-4">
-					<label class="required">Паспорт РФ (разворот с фото)</label>
-					<div class="ubload-btn-group">
-						<div class="float-left"	>
-							<div class="file-upload">
-								<label>
-									<input type="file" name="file" class="input-uploade-file">
-									<span>Выберите файл</span>
-								</label>
-							</div>
-							<div class="file-name"></div>
-						</div>
-						<div class="float-left">
-							<a href="../img/pasport.jpeg" class="fancybox example">Пример</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<label class="required">Водительское удостоверение (лицевая сторона)</label>
-					<div class="ubload-btn-group">
-						<div class="float-left"	>
-							<div class="file-upload">
-								<label>
-									<input type="file" name="file" class="input-uploade-file">
-									<span>Выберите файл</span>
-								</label>
-							</div>
-							<div class="file-name"></div>
-						</div>
-						<div class="float-left">
-							<a href="../img/vod-udost-front.jpeg" class="fancybox example">Пример</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<label class="required">Водительское удостоверение (обратная сторона)</label>
-					<div class="ubload-btn-group">
-						<div class="float-left"	>
-							<div class="file-upload">
-								<label>
-									<input type="file" name="file" class="input-uploade-file">
-									<span>Выберите файл</span>
-								</label>
-							</div>
-							<div class="file-name"></div>
-						</div>
-						<div class="float-left">
-							<a href="../img/vod-udost-back.jpeg" class="fancybox example">Пример</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
-					<label class="required">Свидетельство о регистрации ТС</label>
-					<div class="ubload-btn-group">
-						<div class="float-left"	>
-							<div class="file-upload">
-								<label>
-									<input type="file" name="file" class="input-uploade-file">
-									<span>Выберите файл</span>
-								</label>
-							</div>
-							<div class="file-name"></div>
-						</div>
-						<div class="float-left">
-							<a href="../img/svidet-regist.jpeg" class="fancybox example">Пример</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<label class="required">Страховой полис ОСАГО (лицевая сторона)</label>
-					<div class="ubload-btn-group">
-						<div class="float-left"	>
-							<div class="file-upload">
-								<label>
-									<input type="file" name="file" class="input-uploade-file">
-									<span>Выберите файл</span>
-								</label>
-							</div>
-							<div class="file-name"></div>
-						</div>
-						<div class="float-left">
-							<a href="../img/strah-front.jpeg" class="fancybox example">Пример</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<label class="required">Страховой полис ОСАГО (обратная сторона)</label>
-					<div class="ubload-btn-group">
-						<div class="float-left"	>
-							<div class="file-upload">
-								<label>
-									<input type="file" name="file" class="input-uploade-file">
-									<span>Выберите файл</span>
-								</label>
-							</div>
-							<div class="file-name"></div>
-						</div>
-						<div class="float-left">
-							<a href="../img/strah-back.jpeg" class="fancybox example">Пример</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
-					<label class="required">Фото авто (полупрофиль с передней частью)</label>
-					<div class="ubload-btn-group">
-						<div class="float-left"	>
-							<div class="file-upload">
-								<label>
-									<input type="file" name="file" class="input-uploade-file">
-									<span>Выберите файл</span>
-								</label>
-							</div>
-							<div class="file-name"></div>
-						</div>
-						<div class="float-left">
-							<a href="../img/photo-avto.jpeg" class="fancybox example">Пример</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<label class="required">Фото для личного профиля (на светлом фоне)</label>
-					<div class="ubload-btn-group">
-						<div class="float-left"	>
-							<div class="file-upload">
-								<label>
-									<input type="file" name="file" class="input-uploade-file">
-									<span>Выберите файл</span>
-								</label>
-							</div>
-							<div class="file-name"></div>
-						</div>
-						<div class="float-left">
-							<a href="../img/photo-profile.jpg" class="fancybox example">Пример</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-9">
-				<div class="form-group form-check">
-					<input type="checkbox" class="form-check-input" id="exampleCheck1">
-					<label class="form-check-label" for="exampleCheck1">Я согласен на обработку моих персональных данных в соответствии с условиями указанными по <a href="personal-data-processing-agreement.html">ссылке</a></label>
-				</div>
-			</div>
-			<div class="col-sm-3 text-right">
-				<button type="submit" class="btn btn-green">Отправить анкету</button>
-			</div>
-		</div>
-	</form>
-</div>
-<div class="container">
-
-	<div class="ico-block-reasons">
-		<h2 class="text-center">5 причин работать с нами</h2>
-		<div class="ico-1">Честные условия работы</div>
-		<div class="ico-2">Прозрачное сотрудничество</div>
-		<div class="ico-3">Низкая комиссия</div>
-		<div class="ico-4">Надежная компания</div>
-		<div class="ico-5">Всегда на связи</div>
-	</div>
-</div>
-<div class="container">
-	<p>Компания "МИР" является одним из лидеров среди партнеров крупнейших такси-агрегаторов (Gett, Яндекс.Такси, Ситимобил, Taxify). Бесспорно низкая комиссия парка-партнера - наш приоритет и гордость. А главное - все это без каких-либо тайных уловок и скрытых платежей.</p>
-	<p>Сервисы такси не работают с водителями напрямую, поэтому для подключения необходимо выбрать парк-партнера, естественно, не забывая о том, чтобы он был хорошим и надежным. Крупнейшим партнером Gett, Яндекс.Такси, Ситимобил и Taxify в Санкт-Петербурге является ООО "МИР".</p>
-	<p>Мы осуществляем простое и быстрое подключение к такси по, пожалуй, самым выгодным условиям на рынке. Скидки у партнёров - АЗС, мойки, связь - само собой разумеещееся.</p>
-	<p>Если у вас нет собственного автомобиля - не беда. Мы предоставим автомобиль в аренду по вашим потребностям! </p>
-	<p>Увеличить количество заказов - легко! ООО "МИР" - авторизованный подрядчик по брендированию сервисов Яндекс.Такси и Gett. Опять же - с самыми сладкими условиями.</p>
-	<br>
-	<h2>Отзывы</h2>
-	<div class="reviews">
-		<div>
-			<p class="author author-1">
-				Алексей Васильев<br>
-				<span class="sub">водитель Gett</span>
-			</p>
-			<p class="pro">Работаю с МИР больше года, проблем нет, всегда копейка в копейку и в срок! </p>
-		</div>
-		<div>
-			<p class="author author-2">
-				Рустам Кадиров<br>
-				<span class="sub">водитель Gett, Яндекс.Такси</span>
-			</p>
-			<p class="pro">Взял в аренду Skoda Rapid, зарабатываю больше чем на стройке, а свободного времени гораздо больше. Автомобиль новый, заказов море. </p>
-		</div>
-		<div>
-			<p class="author author-3">
-				Александр Ушаков<br>
-				<span class="sub">водитель Uber</span>
-			</p>
-			<p class="pro">Работал во многих местах, здесь самая низкая комиссия.</p>
-		</div>
-	</div>
-</div>
-
-<div id="myMap" class="map">
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8fbd0db9ce7e069920358146d6820a9c18dc4f49c0ef96dec478ef813b894f46&amp;width=100%25&amp;height=425&amp;lang=ru_RU&amp;"></script>
-</div>
-<!--div class="menu-footer-main"></div-->
-<!--<div class="menu-footer-sub">-->
+    </header>
+    <a href="#" class="menu-mobile">МЕНЮ</a>
+    <!--<nav>-->
     <!--<div class="container">-->
-        <!--<ul>-->
-            <!--<li class="active"><a href="/index.html">Главная</a></li>-->
-            <!--<li><a href="/about.html">О компании</a></li>-->
-            <!--<li><a href="/terms-of-cooperation.html">Условия</a></li>-->
-            <!--<li><a href="/contacts.html">Контакты</a></li>-->
-            <!--<li><a href="/advantages.html">Наши преимущества</a></li>-->
-            <!--<li><a href="/shop.html">Брендирование Яндекс.Такси</a></li>-->
-        <!--</ul>-->
+    <!--<ul>-->
+    <!--<li class="active"><a href="/index.html">Главная</a></li>-->
+    <!--<li><a href="/about.html">О компании</a></li>-->
+    <!--<li><a href="/terms-of-cooperation.html">Условия</a></li>-->
+    <!--<li><a href="/contacts.html">Контакты</a></li>-->
+    <!--<li><a href="/advantages.html">Наши преимущества</a></li>-->
+    <!--<li><a href="/shop.html">Брендирование Яндекс.Такси</a></li>-->
+    <!--</ul>-->
     <!--</div>-->
-<!--</div>-->
-<footer class="container">
-    <div class="contacts">
+    <!--</nav>-->
+    <div class="banner inner">
+      <img src="img/banner.png" alt="" />
+      <div class="info">
+        <span
+          >Самые лучшие условия<br />
+          от Генерального партнера</span
+        >
+        <div class="pdkl">
+          <div><i>Беспредельно низкая комиссия без скрытых условий</i></div>
+          <a data-toggle="modal" href="#" data-target="#claim" class="btn btn-invert">Подключиться</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Подключение к Gett</h1>
+      <p>
+        Работа в Gett - отличная возможность получить дополнительный доход для автовладельцев. Гетт - приложение для
+        заказа такси в 120 городах 4 стран.
+      </p>
+      <p>Высокая стоимость минимального заказа, вежливые клиенты, уникальный уровень сервиса для водителя.</p>
+      <div class="ico-block-5">
+        <div class="ico-1">Свободный график<span>Вы сами решаете когда и сколько работать!</span></div>
+        <div class="ico-2">
+          Никаких планов<span>Мы не ставим дневных / суточных / недельных / месячных планов!</span>
+        </div>
+        <div class="ico-3">Поддержка 24/7<span>Круглосуточная диспетчерская и техническая поддержка!</span></div>
+        <div class="ico-4">Лицензия такси<span>Поможем быстро и надежно оформить лицензию!</span></div>
+        <div class="ico-5">
+          Быстро подключим<span>Подключим Вас за 30 минут <span class="green">без визита в офис</span>.</span>
+        </div>
+      </div>
+      <div class="btn-block-2">
+        <a class="scroll btn btn-md" href="http://aero-in.ru/connect/.document">Работать на своём авто</a>
+        <a class="scroll btn btn-md" href="http://aero-in.ru/connect/.document">Работать на авто компании</a>
+      </div>
+      <h4>Как начать работать?</h4>
+      <p>
+        Для подключения к Gett вам нужно пройти online-обучение <br />
+        Ссылка на обучение -
+        <a href="https://driver.gett.ru/education/exam/up/podklyuchenie-k-gett.html"
+          >https://driver.gett.ru/education/exam/up/</a
+        >
+      </p>
+      <!--<p>Подключение - дело техники: присоединяйтесь к системе через авторизованного партнера, загружайте приложение - и начинайте работу. Gett исключает прямое сотрудничество, вместо этого - позволяет получить юридическую защиту и хорошую техническую и консалтинговую поддержку. Начинайте работать с нами: вас ждут лучшие условия!</p>-->
+      <!--<div class="row btns">-->
+      <!--<div class="col-sm-6 text-right"><a href="https://play.google.com/store/apps/details?id=com.gettaxi.dbx.android" target="_blank" title="Загрузи приложение Gett Drivers в Google play"><img alt="" src="../img/googleplay.png" title=""></a></div>-->
+      <!--<div class="col-sm-6"><a href="itms-services://?action=download-manifest&amp;url=https://alpha.gett.com/driverbox/DriverBox-iOS/version_9.3/22/DriverBox.plist" target="_blank" title="Загрузи приложение Gett Driver в AppStore"><img alt="" src="../img/appstore.png" title=""></a></div>-->
+      <!--</div>-->
+      <!--<p>Для подключения к Gett вам нужно пройти обучение-тестирование.<br>-->
+      <!--Ссылка на обучение - <a href="https://driver.gett.ru/education/exam/up/" rel="nofollow" target="_blank">https://driver.gett.ru/education/exam/up/</a>-->
+      <!--</p>-->
+      <p>
+        Далее для того чтобы подключиться к Gett необходимо подгрузить фото/сканы документов в полях, представленных
+        ниже.
+      </p>
+      <!--<p>Чтобы подключить водителя к Gett водитель должен предварительно пройти онлайн тестирование и после того как он прошел тестирование, прислать нам дату обучения вместе с документами.</p>-->
+      <div class="requirements">
+        <div class="req">
+          <div class="title">Требования к водителю</div>
+          <ul class="list-yes-no">
+            <li>Возраст от&nbsp;21&nbsp;года</li>
+            <li>Права категории В</li>
+          </ul>
+        </div>
+        <div class="req">
+          <div class="title">Требования к автомобилю</div>
+          <ul class="list-yes-no">
+            <li>Минимальный год выпуска&nbsp;— 2011</li>
+            <li>Количество дверей не&nbsp;менее 4</li>
+            <li>Допускаются обклеенные машины</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="pay pay-1">
+            <div class="title">Оплата наличными</div>
+            <p>Наличные полученные от клиента остаются у водителя</p>
+            <p>Комиссия GETT 17,7% (вычитается из безнала)</p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="pay pay-2">
+            <div class="title">Оплата безналом</div>
+            <p>Комиссия GETT 17,7%</p>
+            <p>Наша комиссия с безнала 3%</p>
+            <p>Расчёт и выплаты на карту еженедельно (вт-ср)</p>
+          </div>
+        </div>
+      </div>
+      <div class="document">
+        <div class="title">Для подключения потребуются документы</div>
+        <div class="ico-doc">
+          <div class="ico-1">Паспорт <span>Разворот с фотографией Прописка не нужна</span></div>
+          <div class="ico-2">Водительское удостоверение <span>С двух сторон</span></div>
+          <div class="ico-4">Свидетельство о регистрации транспортного средства <span>С двух сторон</span></div>
+          <div class="ico-5">Фотография автомобиля <span>С четырех сторон</span></div>
+          <div class="ico-7">Фотография водителя без верхней одежды <span>По пояс на светлом фоне</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <form>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group required">
+              <label for="last-name">Фамилия</label>
+              <input type="text" class="form-control" id="last-name" required />
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group required">
+              <label for="name">Имя</label>
+              <input type="text" class="form-control" id="name" required />
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group required">
+              <label for="middle-name">Отчество</label>
+              <input type="text" class="form-control" id="middle-name" required />
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group required">
+              <label for="city">Город</label>
+              <select class="custom-select form-control" id="city" required>
+                <option value=""></option>
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Нижний Новгород">Нижний Новгород</option>
+                <option value="Уфа">Уфа</option>
+                <option value="Красноярск">Красноярск</option>
+                <option value="Челябинск">Челябинск</option>
+                <option value="Омск">Омск</option>
+                <option value="Пермь">Пермь</option>
+                <option value="Самара">Самара</option>
+                <option value="Новосибирск">Новосибирск</option>
+                <option value="Екатеринбург">Екатеринбург</option>
+                <option value="Сочи">Сочи</option>
+                <option value="Краснодар">Краснодар</option>
+                <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                <option value="Воронеж">Воронеж</option>
+                <option value="Казань">Казань</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group required">
+              <label for="phone">Телефон</label>
+              <input
+                type="text"
+                class="form-control"
+                id="phone"
+                name="phone"
+                data-inputmask="'mask': '+7(999) 999-99-99'"
+              />
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group required">
+              <label for="email">E-mail</label>
+              <input type="email" class="form-control" id="email" />
+            </div>
+          </div>
+        </div>
+        <div class="upload-document-group">
+          <div class="row">
+            <div class="col-sm-4">
+              <label class="required">Паспорт РФ (разворот с фото)</label>
+              <div class="ubload-btn-group">
+                <div class="float-left">
+                  <div class="file-upload">
+                    <label>
+                      <input type="file" name="file" class="input-uploade-file" />
+                      <span>Выберите файл</span>
+                    </label>
+                  </div>
+                  <div class="file-name"></div>
+                </div>
+                <div class="float-left">
+                  <a href="../img/pasport.jpeg" class="fancybox example">Пример</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <label class="required">Водительское удостоверение (лицевая сторона)</label>
+              <div class="ubload-btn-group">
+                <div class="float-left">
+                  <div class="file-upload">
+                    <label>
+                      <input type="file" name="file" class="input-uploade-file" />
+                      <span>Выберите файл</span>
+                    </label>
+                  </div>
+                  <div class="file-name"></div>
+                </div>
+                <div class="float-left">
+                  <a href="../img/vod-udost-front.jpeg" class="fancybox example">Пример</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <label class="required">Водительское удостоверение (обратная сторона)</label>
+              <div class="ubload-btn-group">
+                <div class="float-left">
+                  <div class="file-upload">
+                    <label>
+                      <input type="file" name="file" class="input-uploade-file" />
+                      <span>Выберите файл</span>
+                    </label>
+                  </div>
+                  <div class="file-name"></div>
+                </div>
+                <div class="float-left">
+                  <a href="../img/vod-udost-back.jpeg" class="fancybox example">Пример</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <label class="required">Свидетельство о регистрации ТС</label>
+              <div class="ubload-btn-group">
+                <div class="float-left">
+                  <div class="file-upload">
+                    <label>
+                      <input type="file" name="file" class="input-uploade-file" />
+                      <span>Выберите файл</span>
+                    </label>
+                  </div>
+                  <div class="file-name"></div>
+                </div>
+                <div class="float-left">
+                  <a href="../img/svidet-regist.jpeg" class="fancybox example">Пример</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <label class="required">Страховой полис ОСАГО (лицевая сторона)</label>
+              <div class="ubload-btn-group">
+                <div class="float-left">
+                  <div class="file-upload">
+                    <label>
+                      <input type="file" name="file" class="input-uploade-file" />
+                      <span>Выберите файл</span>
+                    </label>
+                  </div>
+                  <div class="file-name"></div>
+                </div>
+                <div class="float-left">
+                  <a href="../img/strah-front.jpeg" class="fancybox example">Пример</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <label class="required">Страховой полис ОСАГО (обратная сторона)</label>
+              <div class="ubload-btn-group">
+                <div class="float-left">
+                  <div class="file-upload">
+                    <label>
+                      <input type="file" name="file" class="input-uploade-file" />
+                      <span>Выберите файл</span>
+                    </label>
+                  </div>
+                  <div class="file-name"></div>
+                </div>
+                <div class="float-left">
+                  <a href="../img/strah-back.jpeg" class="fancybox example">Пример</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <label class="required">Фото авто (полупрофиль с передней частью)</label>
+              <div class="ubload-btn-group">
+                <div class="float-left">
+                  <div class="file-upload">
+                    <label>
+                      <input type="file" name="file" class="input-uploade-file" />
+                      <span>Выберите файл</span>
+                    </label>
+                  </div>
+                  <div class="file-name"></div>
+                </div>
+                <div class="float-left">
+                  <a href="../img/photo-avto.jpeg" class="fancybox example">Пример</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <label class="required">Фото для личного профиля (на светлом фоне)</label>
+              <div class="ubload-btn-group">
+                <div class="float-left">
+                  <div class="file-upload">
+                    <label>
+                      <input type="file" name="file" class="input-uploade-file" />
+                      <span>Выберите файл</span>
+                    </label>
+                  </div>
+                  <div class="file-name"></div>
+                </div>
+                <div class="float-left">
+                  <a href="../img/photo-profile.jpg" class="fancybox example">Пример</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+              <label class="form-check-label" for="exampleCheck1"
+                >Я согласен на обработку моих персональных данных в соответствии с условиями указанными по
+                <a href="personal-data-processing-agreement.html">ссылке</a></label
+              >
+            </div>
+          </div>
+          <div class="col-sm-3 text-right">
+            <button type="submit" class="btn btn-green">Отправить анкету</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <div class="ico-block-reasons">
+        <h2 class="text-center">5 причин работать с нами</h2>
+        <div class="ico-1">Честные условия работы</div>
+        <div class="ico-2">Прозрачное сотрудничество</div>
+        <div class="ico-3">Низкая комиссия</div>
+        <div class="ico-4">Надежная компания</div>
+        <div class="ico-5">Всегда на связи</div>
+      </div>
+    </div>
+    <div class="container">
+      <p>
+        Компания "МИР" является одним из лидеров среди партнеров крупнейших такси-агрегаторов (Gett, Яндекс.Такси,
+        Ситимобил, Taxify). Бесспорно низкая комиссия парка-партнера - наш приоритет и гордость. А главное - все это без
+        каких-либо тайных уловок и скрытых платежей.
+      </p>
+      <p>
+        Сервисы такси не работают с водителями напрямую, поэтому для подключения необходимо выбрать парк-партнера,
+        естественно, не забывая о том, чтобы он был хорошим и надежным. Крупнейшим партнером Gett, Яндекс.Такси,
+        Ситимобил и Taxify в Санкт-Петербурге является ООО "МИР".
+      </p>
+      <p>
+        Мы осуществляем простое и быстрое подключение к такси по, пожалуй, самым выгодным условиям на рынке. Скидки у
+        партнёров - АЗС, мойки, связь - само собой разумеещееся.
+      </p>
+      <p>Если у вас нет собственного автомобиля - не беда. Мы предоставим автомобиль в аренду по вашим потребностям!</p>
+      <p>
+        Увеличить количество заказов - легко! ООО "МИР" - авторизованный подрядчик по брендированию сервисов
+        Яндекс.Такси и Gett. Опять же - с самыми сладкими условиями.
+      </p>
+      <br />
+      <h2>Отзывы</h2>
+      <div class="reviews">
+        <div>
+          <p class="author author-1">
+            Алексей Васильев<br />
+            <span class="sub">водитель Gett</span>
+          </p>
+          <p class="pro">Работаю с МИР больше года, проблем нет, всегда копейка в копейку и в срок!</p>
+        </div>
+        <div>
+          <p class="author author-2">
+            Рустам Кадиров<br />
+            <span class="sub">водитель Gett, Яндекс.Такси</span>
+          </p>
+          <p class="pro">
+            Взял в аренду Skoda Rapid, зарабатываю больше чем на стройке, а свободного времени гораздо больше.
+            Автомобиль новый, заказов море.
+          </p>
+        </div>
+        <div>
+          <p class="author author-3">
+            Александр Ушаков<br />
+            <span class="sub">водитель Uber</span>
+          </p>
+          <p class="pro">Работал во многих местах, здесь самая низкая комиссия.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="myMap" class="map">
+      <script
+        type="text/javascript"
+        charset="utf-8"
+        async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8fbd0db9ce7e069920358146d6820a9c18dc4f49c0ef96dec478ef813b894f46&amp;width=100%25&amp;height=425&amp;lang=ru_RU&amp;"
+      ></script>
+    </div>
+    <!--div class="menu-footer-main"></div-->
+    <!--<div class="menu-footer-sub">-->
+    <!--<div class="container">-->
+    <!--<ul>-->
+    <!--<li class="active"><a href="/index.html">Главная</a></li>-->
+    <!--<li><a href="/about.html">О компании</a></li>-->
+    <!--<li><a href="/terms-of-cooperation.html">Условия</a></li>-->
+    <!--<li><a href="/contacts.html">Контакты</a></li>-->
+    <!--<li><a href="/advantages.html">Наши преимущества</a></li>-->
+    <!--<li><a href="/shop.html">Брендирование Яндекс.Такси</a></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <footer class="container">
+      <div class="contacts">
         <a href="tel:+78126471917" class="phone">+7 (911) <span>928-51-61</span></a>
         <div class="address">Санкт-Петербург, ул. Ново-Рыбинская д.19-21, офис 333</div>
         <a data-toggle="modal" href="http://aero-in.ru/#claim" class="btn btn-green">Подключиться</a>
-    </div>
-    <div class="copy">
+      </div>
+      <div class="copy">
         <div>
-            © 2016-2018 ООО «МИР»<br>
-            <a href="privacy-policy.html">Политика конфиденциальности</a>
+          © 2016-2018 ООО «МИР»<br />
+          <a href="privacy-policy.html">Политика конфиденциальности</a>
         </div>
-        <a href="http://www.prcomm-spb.ru/" class="studio" target="_blank">Корпоративный<br>сайт от PRcomm</a>
-    </div>
-</footer>
-<!--noindex-->
-<div class="modal fade" id="claim" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-md">
+        <a href="http://www.prcomm-spb.ru/" class="studio" target="_blank">Корпоративный<br />сайт от PRcomm</a>
+      </div>
+    </footer>
+    <!--noindex-->
+    <div class="modal fade" id="claim" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-md">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3>Обратный звонок</h3>
-            <div class="claim_form">
-                <form name="adminForm" id="adminForms" class="ajax-contact-form id610" enctype="multipart/form-data" method="post" action="http://aero-in.ru/netcat/add.php">
-                    <input name="admin_mode" type="hidden" value="">
-                    <input type="hidden" name="nc_token" value="706b4c3701de44f30303f577ac003a9b">					<input name="catalogue" type="hidden" value="11">
-                    <input name="cc" type="hidden" value="610">
-                    <input name="sub" type="hidden" value="395">
-                    <input name="posting" type="hidden" value="1">
-                    <input name="curPos" type="hidden" value="0">
-                    <input name="f_Parent_Message_ID" type="hidden" value="">
-                    <input type="hidden" name="f_Checked" value="1">
-                    <input type="hidden" name="f_Razdel" value="Аэро-Ин">
-                    <input type="hidden" class="claimtype" name="f_Type" value="Обратный звонок">
-                    <input type="text" name="f_Name" tabindex="1" required="" placeholder="Ваше имя">
-                    <input type="text" name="f_Phone" tabindex="2" required="" placeholder="Телефон для связи">
-                    <input type="text" name="f_Email" tabindex="3" placeholder="Ваш E-mail">
-                    <div class="accept">
-                        <input id="accept" name="accept" type="checkbox" required="" checked="">
-                        <label for="accept">Согласен на обработку персональных данных</label>
-                    </div>
-                    <div class="text-center captcha">
-                        <div id="g-recaptcha">
-                            <!--<div style="width: 304px; height: 78px;">-->
-                            <!--<div><iframe src="./html/anchor.html" width="304" height="78" role="presentation" name="a-l2lzfoedjaj9" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div>-->
-                            <!--<textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <button class="btn" tabindex="4">Отправить запрос</button>
-                    </div>
-                    <div class="note text-center"></div>
-                </form>
-            </div>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3>Обратный звонок</h3>
+          <div class="claim_form">
+            <form
+              name="adminForm"
+              id="adminForms"
+              class="ajax-contact-form id610"
+              enctype="multipart/form-data"
+              method="post"
+              action="http://aero-in.ru/netcat/add.php"
+            >
+              <input name="admin_mode" type="hidden" value="" />
+              <input type="hidden" name="nc_token" value="706b4c3701de44f30303f577ac003a9b" />
+              <input name="catalogue" type="hidden" value="11" />
+              <input name="cc" type="hidden" value="610" />
+              <input name="sub" type="hidden" value="395" />
+              <input name="posting" type="hidden" value="1" />
+              <input name="curPos" type="hidden" value="0" />
+              <input name="f_Parent_Message_ID" type="hidden" value="" />
+              <input type="hidden" name="f_Checked" value="1" />
+              <input type="hidden" name="f_Razdel" value="Аэро-Ин" />
+              <input type="hidden" class="claimtype" name="f_Type" value="Обратный звонок" />
+              <input type="text" name="f_Name" tabindex="1" required="" placeholder="Ваше имя" />
+              <input type="text" name="f_Phone" tabindex="2" required="" placeholder="Телефон для связи" />
+              <input type="text" name="f_Email" tabindex="3" placeholder="Ваш E-mail" />
+              <div class="accept">
+                <input id="accept" name="accept" type="checkbox" required="" checked="" />
+                <label for="accept">Согласен на обработку персональных данных</label>
+              </div>
+              <div class="text-center captcha">
+                <div id="g-recaptcha">
+                  <!--<div style="width: 304px; height: 78px;">-->
+                  <!--<div><iframe src="./html/anchor.html" width="304" height="78" role="presentation" name="a-l2lzfoedjaj9" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div>-->
+                  <!--<textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>-->
+                  <!--</div>-->
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="btn" tabindex="4">Отправить запрос</button>
+              </div>
+              <div class="note text-center"></div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="modal fade" id="claim3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-md">
+    <div class="modal fade" id="claim3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-md">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3>Оформить заявку</h3>
-            <div class="claim_form">
-                <form name="adminForm" id="adminForms" class="ajax-contact-form id611" enctype="multipart/form-data" method="post" action="http://aero-in.ru/netcat/add.php">
-                    <input name="admin_mode" type="hidden" value="">
-                    <input type="hidden" name="nc_token" value="706b4c3701de44f30303f577ac003a9b">					<input name="catalogue" type="hidden" value="11">
-                    <input name="cc" type="hidden" value="611">
-                    <input name="sub" type="hidden" value="396">
-                    <input name="posting" type="hidden" value="1">
-                    <input name="curPos" type="hidden" value="0">
-                    <input name="f_Parent_Message_ID" type="hidden" value="">
-                    <input type="hidden" name="f_Checked" value="1">
-                    <input type="hidden" name="f_Razdel" value="Аэро-Ин">
-                    <input type="hidden" name="f_Type" value="Обратный звонок">
-                    <input type="text" name="f_Name" tabindex="1" placeholder="Ваше имя">
-                    <input type="text" name="f_Phone" tabindex="2" required="" placeholder="Телефон для связи">
-                    <input type="text" name="f_Email" tabindex="3" placeholder="Ваш E-mail">
-                    <textarea name="f_Comment" tabindex="4" placeholder="Ваш вопрос"></textarea>
-                    <div class="accept">
-                        <input id="accept" name="accept" type="checkbox" required="" checked="">
-                        <label for="accept">Согласен на обработку персональных данных</label>
-                    </div>
-                    <div class="text-center captcha">
-                        <label>Введите код с картинки</label>
-                        <div id="g-recaptcha2">
-                            <!--<div style="width: 304px; height: 78px;">-->
-                            <!--<div><iframe src="./html/anchor(1).html" width="304" height="78" role="presentation" name="a-iqi1jjp3axfc" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div>-->
-                            <!--<textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <button class="btn" tabindex="5">Отправить запрос</button>
-                    </div>
-                    <div class="note text-center"></div>
-                </form>
-            </div>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3>Оформить заявку</h3>
+          <div class="claim_form">
+            <form
+              name="adminForm"
+              id="adminForms"
+              class="ajax-contact-form id611"
+              enctype="multipart/form-data"
+              method="post"
+              action="http://aero-in.ru/netcat/add.php"
+            >
+              <input name="admin_mode" type="hidden" value="" />
+              <input type="hidden" name="nc_token" value="706b4c3701de44f30303f577ac003a9b" />
+              <input name="catalogue" type="hidden" value="11" />
+              <input name="cc" type="hidden" value="611" />
+              <input name="sub" type="hidden" value="396" />
+              <input name="posting" type="hidden" value="1" />
+              <input name="curPos" type="hidden" value="0" />
+              <input name="f_Parent_Message_ID" type="hidden" value="" />
+              <input type="hidden" name="f_Checked" value="1" />
+              <input type="hidden" name="f_Razdel" value="Аэро-Ин" />
+              <input type="hidden" name="f_Type" value="Обратный звонок" />
+              <input type="text" name="f_Name" tabindex="1" placeholder="Ваше имя" />
+              <input type="text" name="f_Phone" tabindex="2" required="" placeholder="Телефон для связи" />
+              <input type="text" name="f_Email" tabindex="3" placeholder="Ваш E-mail" />
+              <textarea name="f_Comment" tabindex="4" placeholder="Ваш вопрос"></textarea>
+              <div class="accept">
+                <input id="accept" name="accept" type="checkbox" required="" checked="" />
+                <label for="accept">Согласен на обработку персональных данных</label>
+              </div>
+              <div class="text-center captcha">
+                <label>Введите код с картинки</label>
+                <div id="g-recaptcha2">
+                  <!--<div style="width: 304px; height: 78px;">-->
+                  <!--<div><iframe src="./html/anchor(1).html" width="304" height="78" role="presentation" name="a-iqi1jjp3axfc" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div>-->
+                  <!--<textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>-->
+                  <!--</div>-->
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="btn" tabindex="5">Отправить запрос</button>
+              </div>
+              <div class="note text-center"></div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!--/noindex-->
-<script src="js/bundle.js"></script>
-<div class="modal fade" id="cityCl" tabindex="-1" role="dialog" aria-hidden="false">
-    <div class="modal-dialog modal-md">
+    <!--/noindex-->
+    <script src="js/bundle.js"></script>
+    <div class="modal fade" id="cityCl" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-md">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3>Выберите город</h3>
-            <div class="cityBlock">
-                <a href="http://aero-in.ru/">Санкт-Петербург</a>
-                <ul>
-                    <li><a href="arhangelsk.html">Архангельск</a></li>
-                    <li><a href="/">Москва</a></li>
-                    <li><a href="/">Воронеж</a></li>
-                    <li><a href="/">Екатеринбург</a></li>
-                    <li><a href="/">Казань</a></li>
-                    <li><a href="/">Краснодар</a></li>
-                    <li><a href="/">Красноярск</a></li>
-                    <li><a href="/">Нижний Новгород</a></li>
-                    <li><a href="/">Новосибирск</a></li>
-                    <li><a href="/">Омск</a></li>
-                    <li><a href="/">Пермь</a></li>
-                    <li><a href="/">Ростов на Дону</a></li>
-                    <li><a href="/">Самара</a></li>
-                    <li><a href="/">Сочи</a></li>
-                    <li><a href="/">Уфа</a></li>
-                    <li><a href="/">Челябинск</a></li>
-                </ul>
-            </div>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3>Выберите город</h3>
+          <div class="cityBlock">
+            <a href="http://aero-in.ru/">Санкт-Петербург</a>
+            <ul>
+              <li><a href="arhangelsk.html">Архангельск</a></li>
+              <li><a href="/">Москва</a></li>
+              <li><a href="/">Воронеж</a></li>
+              <li><a href="/">Екатеринбург</a></li>
+              <li><a href="/">Казань</a></li>
+              <li><a href="/">Краснодар</a></li>
+              <li><a href="/">Красноярск</a></li>
+              <li><a href="/">Нижний Новгород</a></li>
+              <li><a href="/">Новосибирск</a></li>
+              <li><a href="/">Омск</a></li>
+              <li><a href="/">Пермь</a></li>
+              <li><a href="/">Ростов на Дону</a></li>
+              <li><a href="/">Самара</a></li>
+              <li><a href="/">Сочи</a></li>
+              <li><a href="/">Уфа</a></li>
+              <li><a href="/">Челябинск</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
