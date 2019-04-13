@@ -10585,11 +10585,12 @@ input[type="text"] {
     .info {
       float: right;
       text-align: right;
+      margin-bottom: 15px;
     }
     .contacts {
-      margin-left: -150px;
-      position: absolute;
-      left: 50%;
+      //margin-left: -150px;
+      //position: absolute;
+      //left: 50%;
     }
     .btn {
       float: left;
