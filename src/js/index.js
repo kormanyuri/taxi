@@ -121,5 +121,36 @@ $(document).ready(function(){
 
     });
 
+    $('#gettForm').find('[type="submit"]').click(function(e) {
+      e.preventDefault();
+      var lastName = $('#last-name').val();
+      var name = $('#name').val();
+      var middleName = $('#middle-name').val();
+      var city = $('#city').val();
+      var phone = $('#phone').val();
+      var email = $('#email').val();
+
+
+      var form = new FormData();
+      form.append('last_name', lastName);
+      form.append('first_name', name);
+      form.append('middle_name', middleName);
+      form.append('city', city);
+      form.append('phone', phone);
+      form.append('email', email);
+
+      fetch('http://backend.ooo-mir.org/driver/save', {
+        method: 'POST',
+        body: form
+      }).then(data => {
+        console.log(data);
+        alert('Ваш запрос успешно отправлен');
+        window.location.reload();
+      }).catch(err => {
+        console.log(err);
+      });
+
+    });
+
 });
 
