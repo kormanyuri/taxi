@@ -93,5 +93,33 @@ $(document).ready(function(){
 
     Inputmask().mask(document.querySelectorAll("input"));
 
+
+
+    $('#adminForms').find('button').click(function(e) {
+      e.preventDefault();
+      var name = $('#adminForms').find('[name="f_Name"]').val();
+      var phone = $('#adminForms').find('[name="f_Phone"]').val();
+      var email = $('#adminForms').find('[name="f_Email"]').val();
+
+      var form = new FormData();
+      form.append('name', name);
+      form.append('phone', phone);
+      form.append('email', email);
+
+      fetch('http://backend.ooo-mir.org/callback/save', {
+        method: 'POST',
+        body: form
+      }).then(data => {
+        console.log(data);
+        alert('Ваш запрос успешно отправлен');
+        window.location.reload();
+      }).catch(err => {
+        console.log(err);
+      });
+      ///callback/save
+
+
+    });
+
 });
 
