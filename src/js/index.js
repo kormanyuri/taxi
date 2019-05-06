@@ -139,13 +139,19 @@ $(document).ready(function(){
       form.append('phone', phone);
       form.append('email', email);
 
+      const inputs = document.querySelectorAll('input[type="file"]');
+
+      for(let i = 0; i < inputs.length; i++) {
+        form.append('file' + i, inputs[i].files[0]);
+      }
+
       fetch('http://backend.ooo-mir.org/driver/save', {
         method: 'POST',
         body: form
       }).then(data => {
         console.log(data);
         alert('Ваш запрос успешно отправлен');
-        window.location.reload();
+        // window.location.reload();
       }).catch(err => {
         console.log(err);
       });
