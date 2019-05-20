@@ -108,6 +108,10 @@ const config = {
       {
         from: "./src/uploads",
         to: "./uploads"
+      },,
+      {
+        from: "./src/doc",
+        to: "./doc"
       }
     ])
   ].concat(htmlPlugins)

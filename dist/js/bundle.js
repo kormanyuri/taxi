@@ -23710,6 +23710,71 @@ $(document).ready(function(){
 
     inputmask__WEBPACK_IMPORTED_MODULE_1___default()().mask(document.querySelectorAll("input"));
 
+
+
+    $('#adminForms').find('button').click(function(e) {
+      e.preventDefault();
+      var name = $('#adminForms').find('[name="f_Name"]').val();
+      var phone = $('#adminForms').find('[name="f_Phone"]').val();
+      var email = $('#adminForms').find('[name="f_Email"]').val();
+
+      var form = new FormData();
+      form.append('name', name);
+      form.append('phone', phone);
+      form.append('email', email);
+
+      fetch('http://backend.ooo-mir.org/callback/save', {
+        method: 'POST',
+        body: form
+      }).then(data => {
+        console.log(data);
+        alert('Ваш запрос успешно отправлен');
+        window.location.reload();
+      }).catch(err => {
+        console.log(err);
+      });
+      ///callback/save
+
+
+    });
+
+    $('#gettForm').find('[type="submit"]').click(function(e) {
+      e.preventDefault();
+      var lastName = $('#last-name').val();
+      var name = $('#name').val();
+      var middleName = $('#middle-name').val();
+      var city = $('#city').val();
+      var phone = $('#phone').val();
+      var email = $('#email').val();
+
+
+      var form = new FormData();
+      form.append('last_name', lastName);
+      form.append('first_name', name);
+      form.append('middle_name', middleName);
+      form.append('city', city);
+      form.append('phone', phone);
+      form.append('email', email);
+
+      const inputs = document.querySelectorAll('input[type="file"]');
+
+      for(let i = 0; i < inputs.length; i++) {
+        form.append('file' + i, inputs[i].files[0]);
+      }
+
+      fetch('http://backend.ooo-mir.org/driver/save', {
+        method: 'POST',
+        body: form
+      }).then(data => {
+        console.log(data);
+        alert('Ваш запрос успешно отправлен');
+        // window.location.reload();
+      }).catch(err => {
+        console.log(err);
+      });
+
+    });
+
 });
 
 
