@@ -23718,62 +23718,99 @@ $(document).ready(function(){
       var phone = $('#adminForms').find('[name="f_Phone"]').val();
       var email = $('#adminForms').find('[name="f_Email"]').val();
 
-      var form = new FormData();
-      form.append('name', name);
-      form.append('phone', phone);
-      form.append('email', email);
+      var isValid = true;
 
-      fetch('http://backend.ooo-mir.org/callback/save', {
-        method: 'POST',
+      isValid = name !== '';
+      isValid = isValid && phone !== '';
+      isValid = isValid && email !== '';
+
+      if (isValid) {
+        var form = new FormData();
+        form.append('name', name);
+        form.append('phone', phone);
+        form.append('email', email);
+
+        $("body").append(`<div style="" id="loadingDiv">
+                            <div class="loader">Loading...</div>
+                        </div>`);
+
+        fetch('http://backend.ooo-mir.org/callback/save', {
+          method: 'POST',
+          body: form
+        }).then(data => {
+          $("#loadingDiv").fadeOut(500, function() {
+            $("#loadingDiv").remove(); //makes page more lightweight
+          });
+          alert("Ваш запрос успешно отправлен");
+          window.location.reload();
+        }).catch(err => {
+          console.log(err);
+        });
+        ///callback/save
+      } else {
+        alert('Заполните все обязательные поля');
+      }
+
+    });
+
+  $("#gettForm").find("[type=\"submit\"]").click(function(e) {
+    e.preventDefault();
+    var lastName = $("#last-name").val();
+    var name = $("#name").val();
+    var middleName = $("#middle-name").val();
+    var city = $("#city").val();
+    var phone = $("#phone").val();
+    var email = $("#email").val();
+
+    var isValid = true;
+
+    isValid = lastName !== '';
+    isValid = isValid && name !== '';
+    isValid = isValid && middleName !== '';
+    isValid = isValid && city !== '';
+    isValid = isValid && phone !== '';
+    isValid = isValid && email !== '';
+
+    if (!isValid) {
+      alert('Заполните все обязательные поля');
+    } else  if (!$("#exampleCheck1").prop("checked")) {
+      alert("Необходимо согласие на обработку персональных данных");
+    } else {
+      var form = new FormData();
+      form.append("last_name", lastName);
+      form.append("first_name", name);
+      form.append("middle_name", middleName);
+      form.append("city", city);
+      form.append("phone", phone);
+      form.append("email", email);
+
+      const inputs = document.querySelectorAll("input[type=\"file\"]");
+
+      for (let i = 0; i < inputs.length; i++) {
+        form.append("file" + i, inputs[i].files[0]);
+      }
+
+      $("body").append(`<div style="" id="loadingDiv">
+                            <div class="loader">Loading...</div>
+                        </div>`);
+
+
+      fetch("http://backend.ooo-mir.org/driver/save", {
+        method: "POST",
         body: form
       }).then(data => {
-        console.log(data);
-        alert('Ваш запрос успешно отправлен');
+        // console.log(data);
+        $("#loadingDiv").fadeOut(500, function() {
+          $("#loadingDiv").remove(); //makes page more lightweight
+        });
+        alert("Ваш запрос успешно отправлен");
         window.location.reload();
       }).catch(err => {
         console.log(err);
       });
-      ///callback/save
+    }
 
-
-    });
-
-    $('#gettForm').find('[type="submit"]').click(function(e) {
-      e.preventDefault();
-      var lastName = $('#last-name').val();
-      var name = $('#name').val();
-      var middleName = $('#middle-name').val();
-      var city = $('#city').val();
-      var phone = $('#phone').val();
-      var email = $('#email').val();
-
-
-      var form = new FormData();
-      form.append('last_name', lastName);
-      form.append('first_name', name);
-      form.append('middle_name', middleName);
-      form.append('city', city);
-      form.append('phone', phone);
-      form.append('email', email);
-
-      const inputs = document.querySelectorAll('input[type="file"]');
-
-      for(let i = 0; i < inputs.length; i++) {
-        form.append('file' + i, inputs[i].files[0]);
-      }
-
-      fetch('http://backend.ooo-mir.org/driver/save', {
-        method: 'POST',
-        body: form
-      }).then(data => {
-        console.log(data);
-        alert('Ваш запрос успешно отправлен');
-        // window.location.reload();
-      }).catch(err => {
-        console.log(err);
-      });
-
-    });
+  });
 
 });
 
