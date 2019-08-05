@@ -1,0 +1,86 @@
+<% var data = {
+title: "О компании",
+tel: "+7 (911) <span>928-51-61</span>",
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<%= _.template(require('./../includes/banner.html').default)(data) %>
+
+<div class="container">
+    <h1>Документы:</h1>
+    <p><a href="/doc/Договор-оферта (ред.от 18.10.2018).docx">Договор-оферта</a></p>
+    <p><a href="/doc/Политика_конфиденциальности_ред.doc">Политика конфиденциальности</a></p>
+    <p><a href="/doc/Пользовательское_соглашение_ред.doc">Пользовательское соглашение</a></p>
+    <div class="ico-block-5">
+        <div class="ico-1">Свободный график<span>Вы сами решаете когда и сколько работать!</span></div>
+        <div class="ico-2">Никаких планов<span>Мы не ставим дневных / суточных / недельных / месячных планов!</span></div>
+        <div class="ico-3">Поддержка 24/7<span>Круглосуточная диспетчерская и техническая поддержка!</span></div>
+        <div class="ico-4">Лицензия такси<span>Поможем быстро и надежно оформить лицензию!</span></div>
+        <div class="ico-5">Быстро подключим<span>Подключим Вас за 30 минут <span class="green">без визита в офис</span>.</span></div>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div class="row partners">
+        <div class="col-sm-4">
+            <div class="logo-partner">
+                <img src="./img/gett.png" alt="Gett">
+            </div>
+            <a href="/podklyuchenie-k-gett.html">
+                <div class="info-partner img-1">
+                    <div class="title">Подключение<br> к Gett</div>
+                    <ol>
+                        <li>Оставляете заявку на сайте</li>
+                        <li>Отправляете документы</li>
+                        <li>Начинаете зарабатывать</li>
+                    </ol>
+                    <div class="commission">
+                        Комиссия c заказов
+                        <span>Gett - 3%</span>
+                    </div>
+                    <span class="btn-blue">Подключиться<br> к Gett</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <div class="logo-partner">
+                <img src="./img/uber.png" alt="Uber">
+            </div>
+            <a href="http://aero-in.ru/connect/uber.html">
+                <div class="info-partner img-2">
+                    <div class="title">Подключение<br> к Uber</div>
+                    <ol>
+                        <li>Оставляете заявку на сайте</li>
+                        <li>Отправляете документы</li>
+                        <li>Начинаете зарабатывать</li>
+                    </ol>
+                    <div class="commission">
+                        Комиссия c заказов
+                        <span>Uber - 0%<br></span>
+                    </div>
+                    <span class="btn-blue">Подключиться<br> к Uber</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <div class="logo-partner">
+                <img src="./img/ya-taxi.png" alt="Яндекс.Такси">
+            </div>
+            <a href="/podklyuchenie-k-yandex-taxi.html">
+                <div class="info-partner img-3">
+                    <div class="title">Подключение<br> к Яндекс.Такси</div>
+                    <ol>
+                        <li>Оставляете заявку на сайте</li>
+                        <li>Отправляете документы</li>
+                        <li>Начинаете зарабатывать</li>
+                    </ol>
+                    <div class="commission">
+                        Комиссия c заказов
+                        <span>Я.Такси - 0%</span>
+                    </div>
+                    <span class="btn-blue">Подключиться<br> к Яндекс.Такси</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
